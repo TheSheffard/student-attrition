@@ -314,7 +314,7 @@ async function runAnalysis(triggerBtn) {
     }
 
     analysisResults = results;
-    statusEl.textContent = "Simulation completed · saved locally";
+    statusEl.textContent = "completed · saved";
     document.getElementById("generateReportBtn-dash").disabled = false;
     savePredictionRun();
     dashboardView.resetPage();
