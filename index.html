@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Attrition Determination System</title>
+<meta name="description" content="Browser-based Student Attrition Determination System — securely sign in, upload a cohort, simulate attrition risk, keep local prediction history, and export a report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="embedded-styles">
+
+:root {
+  --bg: #F2F3FA;
+  --surface: #FFFFFF;
+  --border: #E7E8F3;
+  --border-strong: #D6D8ED;
+  --text: #1E2233;
+  --text-dim: #6B7290;
+  --text-faint: #9CA0BE;
+
+  --indigo: #4C3FE0;
+  --indigo-2: #6F5CF0;
+  --indigo-dim: #EEEBFD;
+  --blue-heading: #3D4FC7;
+
+  --sidebar-bg: #10142B;
+  --sidebar-text: #A7ABD1;
+  --sidebar-text-active: #FFFFFF;
+
+  --safe: #16A34A;
+  --safe-bg: #E3F9EA;
+  --warn: #C4780B;
+  --warn-bg: #FDF0D9;
+  --danger: #DC2626;
+  --danger-bg: #FDE6E5;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 4px 18px rgba(30, 34, 70, 0.06);
+  --shadow-lg: 0 20px 60px rgba(20, 20, 60, 0.18);
+
+  --font: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select { font-family: inherit; font-size: inherit; color: inherit; }
+code {
+  font-family: var(--font-mono);
+  background: var(--indigo-dim);
+  color: var(--indigo);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* ── LAYOUT ── */
+.app { display: grid; grid-template-columns: 258px 1fr; min-height: 100vh; }
+
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.brand { display: flex; align-items: center; gap: 12px; padding: 4px 6px 26px; }
+.brand-icon { width: 28px; height: 28px; color: #A793FF; flex-shrink: 0; }
+.brand-text { font-size: 12px; font-weight: 800; letter-spacing: 0.02em; color: #fff; line-height: 1.4; }
+
+.nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.nav-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 13px; border: none; background: transparent;
+  color: var(--sidebar-text); border-radius: 10px; text-align: left;
+  cursor: pointer; font-size: 13.5px; font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.nav-item.active { background: linear-gradient(135deg, var(--indigo), var(--indigo-2)); color: #fff; box-shadow: 0 8px 20px rgba(76,63,224,0.35); }
+.nav-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+.sidebar-foot { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; margin-top: 16px; }
+.admin-block { display: flex; align-items: center; gap: 10px; padding: 6px; }
+.admin-avatar {
+  width: 34px; height: 34px; border-radius: 50%; background: rgba(167,147,255,0.18);
+  display: flex; align-items: center; justify-content: center; color: #A793FF; flex-shrink: 0;
+}
+.admin-avatar svg { width: 19px; height: 19px; }
+.admin-name { font-size: 12.5px; font-weight: 700; color: #fff; }
+.admin-role { font-size: 11px; color: var(--sidebar-text); margin-top: 1px; }
+
+.main { padding: 32px 40px 70px; max-width: 1320px; }
+
+/* ── PAGES ── */
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.page-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 22px; flex-wrap: wrap; }
+.page-head h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 5px; }
+.lede { color: var(--text-dim); font-size: 13.5px; max-width: 58ch; }
+.datetime { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--text-dim); font-weight: 500; white-space: nowrap; padding-top: 4px; }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 18px; border-radius: var(--radius-sm); border: 1px solid transparent;
+  font-weight: 700; font-size: 13px; cursor: pointer;
+  transition: filter 0.15s, background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--indigo); color: #fff; }
+.btn-primary:hover:not(:disabled) { filter: brightness(1.08); }
+.btn-gradient { background: linear-gradient(135deg, var(--indigo), var(--indigo-2)); color: #fff; box-shadow: 0 10px 24px rgba(76,63,224,0.28); }
+.btn-gradient:hover:not(:disabled) { filter: brightness(1.06); }
+.btn-outline { background: #fff; border-color: var(--border-strong); color: var(--text); }
+.btn-outline:hover:not(:disabled) { border-color: var(--indigo); color: var(--indigo); }
+.btn-ghost { background: #fff; border-color: var(--border-strong); color: var(--text-dim); }
+.btn-ghost:hover { color: var(--indigo); border-color: var(--indigo); }
+.btn-sm { padding: 8px 14px; font-size: 12.5px; }
+.btn-block { width: 100%; margin-top: 4px; }
+
+.btn-spinner { display: none; width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.35); border-top-color: #fff; animation: spin 0.7s linear infinite; }
+.btn-outline .btn-spinner { border-color: rgba(76,63,224,0.25); border-top-color: var(--indigo); }
+.btn.loading .btn-label, .btn.loading strong, .btn.loading em { opacity: 0.55; }
+.btn.loading .btn-spinner { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.link-btn { background: none; border: none; color: var(--indigo); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; font-size: inherit; font-weight: 600; padding: 0; }
+
+/* ── CARDS ── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+.section-title { font-size: 13.5px; font-weight: 800; color: var(--blue-heading); text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px; }
+.muted { color: var(--text-dim); font-size: 12.5px; }
+
+/* ── DASHBOARD TOP ROW ── */
+.row-3 { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 18px; margin-bottom: 20px; align-items: stretch; }
+@media (max-width: 1150px) { .row-3 { grid-template-columns: 1fr; } }
+
+.dropzone {
+  border: 1.5px dashed var(--border-strong); border-radius: var(--radius-sm);
+  padding: 30px 16px; text-align: center; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s; background: #FAFAFE;
+}
+.dropzone:hover, .dropzone.drag-over { border-color: var(--indigo); background: var(--indigo-dim); }
+.dz-icon { width: 30px; height: 30px; color: var(--indigo-2); margin-bottom: 10px; }
+.dz-title { font-size: 13px; color: var(--text); font-weight: 600; margin-bottom: 4px; }
+.dz-or { font-size: 11.5px; color: var(--text-faint); margin-bottom: 12px; }
+.dz-hint { font-size: 11.5px; color: var(--text-faint); margin-top: 12px; }
+
+.file-badge {
+  margin-top: 14px; display: flex; align-items: center; gap: 10px;
+  background: #F5FBF7; border: 1px solid #CFEEDA; border-radius: 10px; padding: 10px 12px; font-size: 12.5px;
+}
+.file-badge .fb-check { color: var(--safe); width: 18px; height: 18px; flex-shrink: 0; }
+.file-badge .fb-name { font-weight: 600; }
+.file-badge .fb-size { color: var(--text-faint); font-size: 11.5px; }
+.file-badge .fb-remove { margin-left: auto; background: none; border: none; color: var(--danger); cursor: pointer; font-size: 14px; padding: 4px; }
+.csv-error { color: var(--danger); font-size: 12.5px; margin-top: 10px; }
+.upload-alt { margin-top: 14px; text-align: center; font-size: 12.5px; }
+
+.summary-list { display: flex; flex-direction: column; gap: 13px; }
+.summary-list > div { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.summary-list dt { color: var(--text-dim); font-size: 12.5px; }
+.summary-list dd { font-weight: 700; font-size: 13px; text-align: right; }
+.status-pending { color: var(--text-faint); }
+.status-ready { color: var(--safe); }
+
+.action-col { display: flex; flex-direction: column; gap: 12px; }
+.btn-action {
+  flex: 1; justify-content: flex-start; text-align: left; padding: 16px 18px; border-radius: 12px;
+}
+.btn-action .action-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.btn-action span { display: flex; flex-direction: column; gap: 2px; }
+.btn-action strong { font-size: 13.5px; font-weight: 700; }
+.btn-action em { font-size: 11px; font-style: normal; font-weight: 500; opacity: 0.85; }
+.btn-gradient.btn-action .btn-spinner { margin-left: auto; }
+
+/* ── RESULTS TABLE ── */
+.results-section { padding: 0; overflow: hidden; }
+.results-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 20px 22px 0; flex-wrap: wrap; }
+.results-head .section-title { margin-bottom: 0; }
+.results-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.search-box {
+  display: flex; align-items: center; gap: 8px; background: #FAFAFE;
+  border: 1px solid var(--border-strong); border-radius: 100px; padding: 8px 13px; min-width: 190px;
+}
+.search-box svg { width: 15px; height: 15px; color: var(--text-faint); flex-shrink: 0; }
+.search-box input { border: none; background: none; outline: none; font-size: 12.5px; width: 100%; }
+.filter-select-wrap select {
+  background: #FAFAFE; border: 1px solid var(--border-strong); border-radius: 100px;
+  padding: 8px 13px; font-size: 12.5px; outline: none; cursor: pointer;
+}
+
+.table-scroll { overflow-x: auto; padding: 18px 22px 0; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.data-table th {
+  text-align: left; font-weight: 700; color: var(--text-faint); text-transform: uppercase;
+  font-size: 10.5px; letter-spacing: 0.03em; padding: 10px 12px; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.data-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.data-table tbody tr:hover { background: #FAFAFE; }
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+.badge {
+  display: inline-flex; align-items: center; font-size: 11px; font-weight: 700;
+  padding: 4px 11px; border-radius: 100px;
+}
+.badge.risk-High { background: var(--danger-bg); color: var(--danger); }
+.badge.risk-Medium { background: var(--warn-bg); color: var(--warn); }
+.badge.risk-Low { background: var(--safe-bg); color: var(--safe); }
+
+.view-details-btn {
+  background: #fff; border: 1px solid var(--border-strong); color: var(--indigo);
+  font-size: 11.5px; font-weight: 700; padding: 6px 12px; border-radius: 100px; cursor: pointer;
+}
+.view-details-btn:hover { border-color: var(--indigo); background: var(--indigo-dim); }
+
+.table-empty { padding: 46px 20px; text-align: center; color: var(--text-faint); font-size: 13px; }
+
+.pagination { display: flex; align-items: center; justify-content: flex-end; gap: 6px; padding: 16px 22px 22px; flex-wrap: wrap; }
+.pagination button {
+  min-width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--border-strong);
+  background: #fff; color: var(--text-dim); font-size: 12px; font-weight: 600; cursor: pointer;
+}
+.pagination button.active { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+.pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+.pagination .pg-info { color: var(--text-dim); font-size: 12px; margin-right: auto; }
+.pagination .pg-ellipsis { color: var(--text-faint); padding: 0 2px; }
+
+/* ── COHORT SUMMARY ── */
+.cohort-summary { display: grid; grid-template-columns: repeat(4, 1fr) 1.3fr; gap: 16px; margin-top: 20px; }
+@media (max-width: 1150px) { .cohort-summary { grid-template-columns: repeat(2, 1fr); } }
+
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+.stat-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.stat-icon { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stat-icon svg { width: 17px; height: 17px; }
+.stat-icon.total { background: var(--indigo-dim); color: var(--indigo); }
+.stat-icon.low { background: var(--safe-bg); color: var(--safe); }
+.stat-icon.medium { background: var(--warn-bg); color: var(--warn); }
+.stat-icon.high { background: var(--danger-bg); color: var(--danger); }
+.stat-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-dim); }
+.stat-number { font-size: 25px; font-weight: 800; line-height: 1; margin-bottom: 3px; }
+.stat-sub { font-size: 11.5px; color: var(--text-faint); }
+.stat-card.low .stat-number { color: var(--safe); }
+.stat-card.medium .stat-number { color: var(--warn); }
+.stat-card.high .stat-number { color: var(--danger); }
+.sparkline { margin-top: 8px; width: 100%; height: 26px; display: block; }
+
+.overall-card { display: flex; align-items: center; gap: 16px; }
+.overall-text { flex: 1; }
+.overall-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-dim); margin-bottom: 6px; }
+.overall-pct { font-size: 27px; font-weight: 800; color: var(--indigo); line-height: 1; margin-bottom: 4px; }
+.overall-tier { font-size: 12.5px; font-weight: 700; }
+.overall-tier.risk-High { color: var(--danger); }
+.overall-tier.risk-Medium { color: var(--warn); }
+.overall-tier.risk-Low { color: var(--safe); }
+.donut { width: 84px; height: 84px; flex-shrink: 0; }
+
+/* ── UPLOAD DATASET PAGE ── */
+/*.upload-card-wide { margin-bottom: 20px; }
+.upload-actions-row { display: flex; gap: 10px; margin-top: 14px; }
+.manual-card { padding: 0; margin-bottom: 20px; overflow: hidden; }
+.manual-card .results-head { padding: 20px 22px 16px; }
+.manual-card .table-scroll { padding: 0 22px; }
+.manual-card .data-table input, .manual-card .data-table select {
+  background: transparent; border: 1px solid transparent; border-radius: 6px;
+  padding: 5px 7px; width: 100%; min-width: 66px; color: var(--text); font-size: 12px;
+}
+.manual-card .data-table input:hover, .manual-card .data-table select:hover { border-color: var(--border-strong); background: #FAFAFE; }
+.manual-card .data-table input:focus, .manual-card .data-table select:focus { border-color: var(--indigo); outline: none; background: #FAFAFE; }
+.row-remove { background: none; border: none; color: var(--text-faint); cursor: pointer; font-size: 15px; padding: 4px 8px; border-radius: 6px; }
+.row-remove:hover { color: var(--danger); background: var(--danger-bg); }
+.table-foot { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px 20px; }*/
+
+/* ── DRAWER ── */
+.overlay { display: none; position: fixed; inset: 0; background: rgba(16,20,43,0.45); z-index: 500; }
+.overlay.open { display: block; }
+.drawer {
+  position: absolute; top: 0; right: 0; height: 100%; width: 380px; max-width: 92vw;
+  background: #fff; box-shadow: var(--shadow-lg); padding: 22px 24px; overflow-y: auto;
+  animation: slideIn 0.22s ease;
+}
+@keyframes slideIn { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.drawer-head h3 { font-size: 15.5px; font-weight: 800; }
+.drawer-student { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.drawer-avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--indigo-dim); color: var(--indigo); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.drawer-avatar svg { width: 24px; height: 24px; }
+.drawer-name { font-size: 15px; font-weight: 800; }
+.drawer-sub { font-size: 12px; color: var(--text-dim); }
+.drawer-rows { display: flex; flex-direction: column; gap: 12px; }
+.drawer-row { display: flex; justify-content: space-between; font-size: 12.5px; }
+.drawer-row span:first-child { color: var(--text-dim); }
+.drawer-row strong { font-weight: 700; }
+.drawer-row strong.danger { color: var(--danger); }
+.drawer-row strong.warn { color: var(--warn); }
+.drawer-row strong.safe { color: var(--safe); }
+.drawer-divider { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+
+/* ── INFO MODAL ── */
+.overlay#infoOverlay { display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
+.overlay#infoOverlay.open { display: flex; }
+.info-modal { background: #fff; border-radius: 16px; max-width: 540px; width: 100%; padding: 32px 28px 28px; position: relative; box-shadow: var(--shadow-lg); }
+.info-modal h2 { font-size: 18.5px; margin-bottom: 14px; font-weight: 800; }
+.info-modal p { color: var(--text-dim); font-size: 13px; line-height: 1.65; margin-bottom: 12px; }
+.info-modal .btn { margin-top: 8px; }
+.modal-close { position: absolute; top: 16px; right: 16px; background: var(--bg); border: none; color: var(--text-dim); width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 13px; }
+.modal-close:hover { color: var(--text); }
+
+.fab-info {
+  position: fixed; bottom: 24px; right: 24px; width: 42px; height: 42px; border-radius: 50%;
+  background: var(--sidebar-bg); color: #fff; border: none; font-weight: 800; font-size: 15px;
+  cursor: pointer; box-shadow: var(--shadow-lg); z-index: 100;
+}
+
+/* ── REPORT PAGE ── */
+.report-empty { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 60px 20px; text-align: center; color: var(--text-faint); }
+.report-sheet { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 40px; box-shadow: var(--shadow); }
+.report-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--indigo); padding-bottom: 18px; margin-bottom: 22px; }
+.report-header h2 { font-size: 18px; font-weight: 800; }
+.report-header p { font-size: 12.5px; color: var(--text-dim); margin-top: 3px; }
+.report-meta { text-align: right; font-size: 11.5px; color: var(--text-dim); line-height: 1.6; }
+.report-h3 { font-size: 13px; font-weight: 800; color: var(--blue-heading); text-transform: uppercase; letter-spacing: 0.02em; margin: 26px 0 14px; }
+.report-h3:first-of-type { margin-top: 0; }
+.report-p { font-size: 12.5px; color: var(--text-dim); line-height: 1.65; margin-bottom: 14px; max-width: 80ch; }
+.report-stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+@media (max-width: 900px) { .report-stat-grid { grid-template-columns: repeat(2, 1fr); } }
+.report-stat { background: var(--bg); border-radius: 10px; padding: 14px; text-align: center; }
+.report-stat .num { font-size: 21px; font-weight: 800; }
+.report-stat .lbl { font-size: 10.5px; color: var(--text-dim); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.02em; }
+
+/* ── RESPONSIVE SIDEBAR ── */
+@media (max-width: 860px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; flex-direction: row; align-items: center; overflow-x: auto; padding: 14px 16px; }
+  .brand { padding: 0; margin: 0 14px 0 0; }
+  .brand-text { display: none; }
+  .nav { flex-direction: row; flex: none; }
+  .nav-item span { display: none; }
+  .sidebar-foot { display: none; }
+  .main { padding: 22px 16px 60px; }
+}
+
+/* ── PRINT ── */
+@media print {
+  .no-print, .sidebar, .fab-info { display: none !important; }
+  .app { display: block; }
+  .main { padding: 0; max-width: none; }
+  .page { display: none !important; }
+  #page-report { display: block !important; }
+  .report-sheet { box-shadow: none; border: none; padding: 0; }
+  body { background: #fff; }
+}
+
+</style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- FRONTEND-ONLY PERSONNEL LOGIN -->
+<section class="login-screen" id="loginScreen">
+  <div class="login-visual" aria-hidden="true">
+    <div class="login-visual-content">
+      <div class="login-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.18v3.63C5 19.8 8.13 21 12 21s7-1.2 7-4.19v-3.63l-7 3.82-7-3.82z"/></svg></div>
+      <p class="login-eyebrow">Academic Intelligence Portal</p>
+      <h1>Identify students who may need support—earlier.</h1>
+      <p>Run private, browser-based attrition simulations and keep every result on this device.</p>
+      <div class="login-security-note"><span>✓</span> No student data is sent to a server</div>
+    </div>
+  </div>
+  <div class="login-panel">
+    <form class="login-card" id="loginForm" novalidate>
+      <div class="login-mobile-brand">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.18v3.63C5 19.8 8.13 21 12 21s7-1.2 7-4.19v-3.63l-7 3.82-7-3.82z"/></svg>
+        <span>Student Attrition System</span>
+      </div>
+      <p class="login-eyebrow">Authorized personnel only</p>
+      <h2>Welcome back</h2>
+      <p class="login-subtitle">Sign in to open the analysis dashboard.</p>
+      <label class="field-label" for="loginEmail">Email address</label>
+      <input class="login-input" id="loginEmail" name="email" type="email" autocomplete="username" placeholder="admin@institution.edu" required>
+      <label class="field-label" for="loginPassword">Password</label>
+      <div class="password-wrap">
+        <input class="login-input" id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">Show</button>
+      </div>
+      <p class="login-error" id="loginError" role="alert" hidden></p>
+      <button class="btn btn-gradient login-submit" type="submit"><span>Sign in securely</span></button>
+      <div class="demo-access">
+        <strong>Defence demo access</strong>
+        <span>Email: admin@institution.edu</span>
+        <span>Password: Admin@123</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="app" id="appShell" hidden>
+
+  <!-- SIDEBAR  -->
+  <aside class="sidebar">
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.18v3.63C5 19.8 8.13 21 12 21s7-1.2 7-4.19v-3.63l-7 3.82-7-3.82z"/></svg>
+      <div class="brand-text">STUDENT ATTRITION<br>DETERMINATION SYSTEM</div>
+    </div>
+
+    <nav class="nav" id="tabNav">
+      <button class="nav-item active" data-tab="dashboard">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.3"/></svg>
+        <span>Dashboard</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="admin-block">
+        <div class="admin-avatar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c0-4.1 3.4-7 7.5-7s7.5 2.9 7.5 7"/></svg>
+        </div>
+        <div>
+          <div class="admin-name" id="signedInName">Administrator</div>
+          <div class="admin-role" id="signedInRole">System Admin</div>
+        </div>
+      </div>
+      <button class="logout-btn" id="logoutBtn" type="button">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- MAIN MENU -->
+  <main class="main">
+
+    <!--  DASHBOARD -->
+    <section class="page active" id="page-dashboard">
+      <header class="page-head">
+        <div>
+          <h1>Batch Attrition Analysis Dashboard</h1>
+          <p class="lede">Upload student academic data and determine attrition risk for the entire cohort.</p>
+        </div>
+        <div class="datetime" id="liveDatetime"></div>
+      </header>
+
+      <div class="row-3">
+        <div class="card upload-card">
+          <h2 class="section-title">1. Upload student dataset</h2>
+          <div class="dropzone" id="dropzone-dash">
+            <input type="file" id="csvInput-dash" accept=".csv" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="dz-icon"><path d="M12 4v11M12 4l-4.5 4.5M12 4l4.5 4.5"/><path d="M4.5 17v1.5A2.5 2.5 0 007 21h10a2.5 2.5 0 002.5-2.5V17"/></svg>
+            <p class="dz-title">Drag &amp; drop your CSV file here</p>
+            <p class="dz-or">or</p>
+            <button type="button" class="btn btn-primary btn-sm" id="chooseFileBtn-dash">Choose File</button>
+          </div>
+          <div class="file-badge" id="fileBadge-dash" hidden></div>
+          <p class="csv-error" id="csvError-dash" hidden></p>
+        </div>
+
+        <div class="card summary-card-info">
+          <h2 class="section-title">Dataset summary</h2>
+          <dl class="summary-list" id="datasetSummary">
+            <div><dt>File name</dt><dd id="sumFileName">—</dd></div>
+            <div><dt>Upload date</dt><dd id="sumUploadDate">—</dd></div>
+            <div><dt>Total students</dt><dd id="sumTotal">—</dd></div>
+            <div><dt>Total features</dt><dd id="sumFeatures">18</dd></div>
+            <div><dt>Status</dt><dd id="sumStatus" class="status-pending">Awaiting upload</dd></div>
+          </dl>
+        </div>
+
+        <div class="action-col">
+          <button class="btn btn-gradient btn-action" id="runAnalysisBtn-dash" disabled>
+            <svg viewBox="0 0 24 24" fill="currentColor" class="action-icon"><path d="M8 5v14l11-7z"/></svg>
+            <span>
+              <strong>Run Attrition Analysis</strong>
+              <em>Predict attrition risk for all students</em>
+            </span>
+            <span class="btn-spinner"></span>
+          </button>
+          <button class="btn btn-outline btn-action" id="generateReportBtn-dash" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="action-icon"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 016 19V5A1.5 1.5 0 017 3.5z"/><path d="M14 3.5V8h4"/></svg>
+            <span>
+              <strong>Generate Report (PDF)</strong>
+              <em>Print or save the analysis as PDF</em>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="card results-section" id="resultsSection-dash">
+        <div class="results-head">
+          <h2 class="section-title" id="resultsTitle-dash">2. Prediction results</h2>
+          <div class="results-tools">
+            <div class="filter-select-wrap">
+              <select id="historySelect" aria-label="Saved prediction runs" hidden></select>
+            </div>
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.7-4.7"/></svg>
+              <input type="text" placeholder="Search student…" id="searchInput-dash">
+            </div>
+            <div class="filter-select-wrap">
+              <select id="filterSelect-dash">
+                <option value="all">All risk levels</option>
+                <option value="High">High risk</option>
+                <option value="Medium">Medium risk</option>
+                <option value="Low">Low risk</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="clearHistoryBtn" hidden>Clear saved results</button>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table results-table" id="resultsTable-dash">
+            <thead>
+              <tr><th>#</th><th>Student ID</th><th>Level</th><th>CGPA</th><th>Attendance (%)</th><th>Risk score (%)</th><th>Risk level</th><th></th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="table-empty" id="resultsEmpty-dash">
+          <p>Upload a dataset and run the analysis to see per-student predictions here.</p>
+        </div>
+        <div class="pagination" id="pagination-dash"></div>
+      </div>
+
+      <div class="cohort-summary" id="cohortSummary-dash"></div>
+
+      <!-- PRINT-ONLY REPORT CONTENT -->
+      <div class="report-sheet" id="reportSheet" hidden>
+        <div class="report-header">
+          <div>
+            <h2>Student Attrition Determination System</h2>
+            <p>Batch Attrition Analysis — Cohort Report</p>
+          </div>
+          <div class="report-meta" id="reportMeta"></div>
+        </div>
+
+        <h3 class="report-h3">Cohort summary</h3>
+        <div class="report-stat-grid" id="reportStats"></div>
+
+        <h3 class="report-h3">Simulation methodology</h3>
+        <p class="report-p">This defence-mode report uses a deterministic browser-based simulation. The score combines CGPA, attendance, course completion, failed units, carryovers, repeated courses, GPA trend, and probation indicators. No backend API or trained machine-learning model is contacted.</p>
+
+        <h3 class="report-h3">Highest-risk students</h3>
+        <div class="table-scroll">
+          <table class="data-table" id="reportHighRiskTable"></table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- STUDENT DETAIL DRAWER -->
+<div class="overlay" id="drawerOverlay">
+  <aside class="drawer">
+    <div class="drawer-head">
+      <h3>Student details</h3>
+      <button class="modal-close" id="drawerClose">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+</div>
+
+<!-- HOW THE MODEL WORKS  -->
+<div class="overlay" id="infoOverlay">
+  <div class="info-modal">
+    <button class="modal-close" id="infoClose">✕</button>
+    <h2>How the system works</h2>
+    <p>This deployment runs entirely in the browser. Uploaded academic records are evaluated with a deterministic <strong>attrition-risk simulation</strong>; no request is made to FastAPI or any other backend.</p>
+    <p>The simulator weighs academic indicators such as CGPA, attendance, course completion, failed units, carryovers, repeated courses, GPA trend, and probation history. It then presents a simulated probability, a binary result, and Low/Medium/High tiers.</p>
+    <p>Your login session and saved prediction runs are kept in this browser's <code>localStorage</code>. They remain available after a refresh on the same browser and device, but they are not synced to other devices.</p>
+    <button class="btn btn-primary" id="infoGotIt">Got it</button>
+  </div>
+</div>
+
+<button class="fab-info no-print" id="howItWorksFab" title="How this simulation works">?</button>
+
+<script src="script.js"></script>
+</body>
+</html>

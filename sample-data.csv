@@ -1,0 +1,381 @@
+Level_of_Study,Mode_of_Entry,Admission_Year,Current_Semester,Semester_GPA,CGPA,Previous_Semester_GPA,GPA_Trend,Total_Credit_Units_Registered,Total_Credit_Units_Passed,Total_Credit_Units_Failed,Credit_Completion_Rate_%,Number_of_Outstanding_Courses,Number_of_Carryovers,Number_of_Repeated_Courses,Attendance_Percentage,Academic_Probation,Number_of_Probation_Occurrences,Attrition_Status
+200,Direct Entry,2023,First Semester,5,4.88,4.75,Improving,21,21,0,100,0,0,0,93,No,0,No
+100,UTME,2025,First Semester,3.72,3.92,4.16,Declining,21,20,1,95.2,3,3,2,78.5,No,0,No
+100,UTME,2025,Second Semester,3.53,3.62,3.42,Stable,22,21,1,95.5,2,3,2,60.8,No,0,Yes
+100,UTME,2024,First Semester,3.07,3.05,3.14,Stable,22,19,3,86.4,2,3,1,68.3,No,0,Yes
+500,Direct Entry,2021,First Semester,3.65,3.68,3.45,Improving,21,21,0,100,1,0,0,94.9,No,0,No
+200,UTME,2023,First Semester,2.77,2.77,2.57,Improving,17,16,1,94.1,1,3,1,72.8,No,0,Yes
+200,UTME,2023,First Semester,3.87,4.06,3.95,Stable,23,22,1,95.7,0,0,0,76.8,No,0,No
+500,UTME,2021,First Semester,5,5,5,Stable,18,18,0,100,0,0,0,84.5,No,1,No
+100,UTME,2024,Second Semester,4.61,4.25,3.9,Improving,22,22,0,100,0,0,0,84.7,No,0,No
+200,UTME,2023,Second Semester,4.41,4.27,4.22,Improving,19,18,1,94.7,2,3,2,78.5,No,0,No
+200,UTME,2024,Second Semester,4.52,4.34,4.05,Improving,23,23,0,100,0,0,0,100,No,0,No
+300,UTME,2022,Second Semester,4.18,4.52,4.74,Declining,17,16,1,94.1,3,2,2,76.2,No,0,No
+100,UTME,2024,First Semester,1.84,2.34,2.31,Declining,20,17,3,85,5,4,2,41.8,No,0,Yes
+300,UTME,2023,Second Semester,4.27,4.66,4.51,Declining,20,20,0,100,1,0,0,73.6,No,0,No
+100,UTME,2024,First Semester,5,4.56,4.6,Improving,20,20,0,100,0,0,0,100,No,0,No
+100,UTME,2025,Second Semester,3.89,4.2,4.26,Declining,23,22,1,95.7,4,0,0,93.4,No,1,No
+200,Direct Entry,2024,Second Semester,5,4.97,4.87,Stable,22,22,0,100,0,0,0,78.5,No,0,No
+200,UTME,2024,Second Semester,3.94,3.92,4.15,Declining,19,18,1,94.7,1,2,1,68.7,No,0,No
+100,UTME,2025,First Semester,4.46,4.32,3.85,Improving,24,24,0,100,1,0,0,91.3,No,0,No
+300,UTME,2022,First Semester,5,4.71,4.31,Improving,20,20,0,100,0,0,0,82.5,No,2,No
+300,UTME,2022,First Semester,3.79,3.94,3.81,Stable,22,22,0,100,1,0,0,68,No,0,No
+200,UTME,2023,Second Semester,4.05,4.39,4.25,Declining,24,24,0,100,2,0,0,84.4,No,0,No
+100,UTME,2024,First Semester,3.54,3.4,3.35,Improving,17,17,0,100,0,0,0,95.6,No,0,No
+500,UTME,2021,First Semester,4.47,4.5,4.57,Stable,21,21,0,100,0,0,0,79.1,No,0,No
+400,Transfer,2021,Second Semester,5,4.72,4.37,Improving,22,22,0,100,0,0,0,98.6,No,0,No
+400,Direct Entry,2022,Second Semester,3.33,3.08,3.2,Stable,18,16,2,88.9,1,4,3,61.1,No,0,No
+500,UTME,2021,Second Semester,4.07,3.88,4.13,Stable,23,22,1,95.7,3,0,0,69.4,No,0,No
+100,UTME,2025,First Semester,2.7,2.64,2.84,Stable,24,21,3,87.5,0,0,0,75.5,No,0,No
+500,UTME,2021,First Semester,3.59,3.68,3.54,Stable,20,17,3,85,1,1,1,74,No,0,No
+300,UTME,2022,First Semester,4.63,4.59,4.56,Stable,17,17,0,100,0,0,0,91.9,No,0,No
+400,UTME,2022,Second Semester,3.03,3.19,3.31,Declining,18,15,3,83.3,4,1,1,61.7,No,0,Yes
+400,UTME,2021,Second Semester,4.82,4.94,4.93,Stable,17,16,1,94.1,1,1,0,75.5,No,0,No
+300,UTME,2022,Second Semester,5,5,4.99,Stable,16,16,0,100,0,0,0,96.3,No,0,No
+200,UTME,2023,Second Semester,4.89,4.55,4.31,Improving,24,24,0,100,0,0,0,81.5,No,0,No
+500,Direct Entry,2021,First Semester,4.61,4.64,4.2,Improving,17,17,0,100,0,0,0,90.5,No,0,No
+200,UTME,2023,First Semester,3.24,3.39,3.54,Declining,18,15,3,83.3,0,4,2,64.1,No,0,No
+200,UTME,2024,First Semester,2.6,2.72,2.78,Declining,19,15,4,78.9,1,1,0,71.8,No,0,Yes
+200,Direct Entry,2024,First Semester,4.34,4.4,4.65,Declining,19,19,0,100,0,0,0,81.2,No,0,No
+300,UTME,2023,First Semester,4.16,4.14,4.2,Stable,17,17,0,100,0,1,1,76.9,No,0,No
+200,UTME,2023,Second Semester,2.15,2.32,2.35,Declining,21,20,1,95.2,3,1,1,73.7,No,0,Yes
+200,UTME,2023,First Semester,3.34,3.45,3.68,Declining,19,19,0,100,2,2,1,77.3,No,0,No
+300,UTME,2022,Second Semester,2.9,3.23,3.31,Declining,16,13,3,81.2,3,5,2,76.6,No,1,Yes
+500,UTME,2020,Second Semester,4.01,3.8,4.21,Declining,21,20,1,95.2,0,1,1,77.2,No,0,No
+300,Direct Entry,2023,Second Semester,4.32,4.13,4.24,Stable,24,24,0,100,0,0,0,99.2,No,0,No
+400,Direct Entry,2022,Second Semester,3.63,3.35,3.55,Stable,16,16,0,100,1,3,2,72.1,No,0,No
+100,UTME,2024,Second Semester,4.47,4.75,4.88,Declining,16,15,1,93.8,2,1,0,78.6,No,0,No
+400,UTME,2021,First Semester,3.89,3.79,3.92,Stable,23,22,1,95.7,1,1,1,79.4,No,0,No
+400,Direct Entry,2021,First Semester,3.52,3.68,3.7,Declining,18,16,2,88.9,2,1,1,81.1,No,0,No
+200,UTME,2024,Second Semester,5,4.35,4.28,Improving,17,17,0,100,0,0,0,90.2,No,0,No
+100,Direct Entry,2025,First Semester,3.98,4.61,4.65,Declining,19,18,1,94.7,4,0,0,80.5,No,0,No
+200,UTME,2024,First Semester,2.36,2.53,2.72,Declining,17,15,2,88.2,1,2,1,76.5,No,0,No
+300,UTME,2023,Second Semester,4.37,4.51,4.15,Improving,21,18,3,85.7,2,1,1,69.7,No,1,No
+200,UTME,2024,Second Semester,4.21,4.12,3.83,Improving,15,15,0,100,1,2,2,93.8,No,0,No
+400,UTME,2022,Second Semester,3.62,3.68,3.87,Declining,19,18,1,94.7,3,4,3,70.9,No,0,No
+300,Transfer,2023,Second Semester,2.69,3.2,3.16,Declining,21,17,4,81,4,2,1,43,No,0,Yes
+100,UTME,2024,First Semester,5,4.97,5,Stable,18,18,0,100,0,0,0,99.9,No,1,No
+100,UTME,2024,First Semester,3.49,3.42,3.09,Improving,23,21,2,91.3,2,1,0,71.4,No,1,No
+300,Direct Entry,2023,Second Semester,1.75,1.96,2.49,Declining,20,16,4,80,3,6,2,72.1,Yes,1,Yes
+100,UTME,2025,Second Semester,4.36,4.38,4.88,Declining,15,14,1,93.3,1,0,0,92.5,No,0,No
+400,UTME,2022,First Semester,2.77,2.77,2.9,Stable,17,16,1,94.1,4,2,1,78.1,No,0,No
+100,Direct Entry,2025,Second Semester,4.69,4.67,4.88,Declining,21,21,0,100,1,1,1,96.5,No,0,No
+500,UTME,2020,First Semester,5,4.81,4.87,Stable,22,22,0,100,0,0,0,94.4,No,0,No
+300,Direct Entry,2022,First Semester,3.02,3.21,3.39,Declining,17,13,4,76.5,5,1,0,66.7,No,0,No
+500,UTME,2020,Second Semester,2.96,3.23,2.91,Stable,22,17,5,77.3,1,2,1,64.3,No,0,Yes
+200,UTME,2023,First Semester,4.3,4.31,4.37,Stable,16,16,0,100,0,0,0,84,No,0,No
+400,Direct Entry,2021,First Semester,4.85,4.67,4.7,Improving,16,16,0,100,0,0,0,95.4,No,0,No
+500,UTME,2021,Second Semester,4.25,4.24,4.3,Stable,22,21,1,95.5,1,1,0,89.7,No,2,No
+300,UTME,2023,Second Semester,3.25,3.17,3.04,Improving,21,19,2,90.5,3,0,0,86.7,No,0,No
+300,UTME,2023,Second Semester,3.94,3.74,3.43,Improving,20,20,0,100,2,1,1,76.6,No,1,No
+400,Transfer,2021,First Semester,3.44,3.19,3.39,Stable,24,23,1,95.8,3,0,0,82,No,1,No
+400,Direct Entry,2021,First Semester,3.29,3.01,3.43,Stable,17,15,2,88.2,4,1,1,71.4,No,0,No
+500,UTME,2020,First Semester,4.92,4.53,4.3,Improving,15,15,0,100,0,0,0,100,No,0,No
+200,Direct Entry,2024,Second Semester,2.95,2.85,2.94,Stable,18,16,2,88.9,4,3,2,65.7,No,0,Yes
+200,UTME,2024,First Semester,4.85,4.58,4.71,Stable,24,24,0,100,1,0,0,100,No,1,No
+100,UTME,2025,Second Semester,3.71,3.74,3.63,Stable,19,19,0,100,0,0,0,68.8,No,1,No
+200,Transfer,2023,Second Semester,3.27,3.35,3.24,Stable,24,18,6,75,2,3,2,72.7,No,0,Yes
+200,UTME,2023,Second Semester,2.3,2.42,2.72,Declining,16,13,3,81.2,2,4,1,57.5,No,0,Yes
+400,UTME,2021,Second Semester,3.77,3.41,3.36,Improving,23,22,1,95.7,3,2,1,87.9,No,0,No
+400,UTME,2021,First Semester,3.96,3.63,3.63,Improving,16,16,0,100,1,0,0,80.3,No,0,No
+100,UTME,2025,Second Semester,5,4.5,3.66,Improving,22,22,0,100,0,0,0,100,No,0,No
+500,UTME,2021,Second Semester,3.91,3.48,3.32,Improving,21,21,0,100,0,0,0,96.1,No,1,No
+300,UTME,2023,First Semester,4.46,4.34,4.18,Improving,21,21,0,100,0,0,0,92.7,No,0,No
+300,UTME,2023,Second Semester,5,4.86,4.75,Improving,19,19,0,100,1,0,0,99.4,No,1,No
+300,UTME,2023,Second Semester,3.99,3.88,4,Stable,24,23,1,95.8,0,0,0,92.8,No,1,No
+100,UTME,2025,First Semester,4.48,4.3,3.93,Improving,16,16,0,100,0,0,0,94.3,No,0,No
+400,UTME,2021,Second Semester,3.82,3.77,3.83,Stable,24,24,0,100,1,2,1,79.8,No,0,No
+500,Direct Entry,2020,First Semester,4.71,4.78,4.62,Stable,20,19,1,95,0,0,0,80.6,No,1,No
+100,UTME,2024,First Semester,3.45,3.66,3.64,Declining,22,20,2,90.9,1,2,1,81.3,No,0,No
+500,Direct Entry,2020,First Semester,4.63,4.61,4.81,Declining,16,15,1,93.8,0,3,1,83.8,No,0,No
+300,UTME,2023,Second Semester,5,4.57,4.36,Improving,18,18,0,100,0,0,0,78.7,No,0,No
+100,Direct Entry,2024,Second Semester,3.79,3.65,3.5,Improving,22,21,1,95.5,0,1,1,78.8,No,0,No
+500,UTME,2020,Second Semester,4.59,4.52,4.48,Stable,15,15,0,100,0,0,0,91.5,No,0,No
+100,UTME,2025,Second Semester,4.85,4.4,4.38,Improving,22,22,0,100,0,0,0,82.7,No,0,No
+200,UTME,2023,Second Semester,2.56,2.9,3.07,Declining,16,15,1,93.8,3,4,1,71.4,No,0,Yes
+300,UTME,2023,First Semester,3.63,3.9,3.83,Declining,23,20,3,87,1,3,1,80.3,No,0,No
+200,UTME,2024,Second Semester,4.2,4.33,4.35,Declining,22,20,2,90.9,4,1,1,90.2,No,0,No
+400,Direct Entry,2022,First Semester,4.4,4.78,4.72,Declining,17,16,1,94.1,0,1,1,76.6,No,1,No
+500,UTME,2021,Second Semester,3.95,4.42,4.13,Declining,18,16,2,88.9,1,0,0,80.8,No,1,No
+300,Direct Entry,2022,First Semester,2.96,3.22,3.5,Declining,23,22,1,95.7,3,1,1,58.3,No,0,No
+300,UTME,2023,Second Semester,2.44,2.61,2.31,Stable,16,15,1,93.8,3,4,2,66.2,No,0,Yes
+100,UTME,2025,Second Semester,3.47,3.18,3.18,Improving,24,23,1,95.8,2,1,1,94.8,No,1,No
+400,UTME,2021,First Semester,2.67,2.26,2.23,Improving,18,16,2,88.9,1,1,0,66.9,No,0,No
+400,UTME,2021,Second Semester,3.64,3.64,3.67,Stable,21,19,2,90.5,2,3,1,83.6,No,0,No
+300,UTME,2022,Second Semester,3.44,3.88,4.21,Declining,21,17,4,81,3,6,4,69.6,No,0,Yes
+500,UTME,2020,First Semester,4.63,4.7,4.42,Improving,24,23,1,95.8,1,1,1,68.2,No,0,No
+400,Direct Entry,2021,First Semester,4.04,3.6,3.79,Improving,18,18,0,100,0,1,1,83.4,No,1,No
+300,UTME,2023,First Semester,1.79,2.12,2.07,Declining,17,10,7,58.8,4,7,5,57.8,No,0,Yes
+500,Direct Entry,2021,First Semester,4.82,4.82,4.84,Stable,24,24,0,100,0,0,0,92.7,No,1,No
+300,UTME,2022,Second Semester,2.27,2.9,3.09,Declining,23,18,5,78.3,4,5,4,54.6,No,1,Yes
+300,Direct Entry,2023,First Semester,5,4.44,4.44,Improving,15,15,0,100,0,0,0,100,No,0,No
+100,UTME,2024,Second Semester,3.99,4.28,4.1,Stable,23,21,2,91.3,0,2,1,75,No,0,No
+400,UTME,2021,Second Semester,4.4,4.39,4.12,Improving,20,18,2,90,2,1,1,77.8,No,0,No
+300,UTME,2023,First Semester,3.48,3.36,3.34,Stable,17,17,0,100,1,4,1,86.4,No,0,No
+500,UTME,2021,First Semester,3.25,3.41,3.36,Stable,19,17,2,89.5,0,3,2,65.6,No,1,No
+300,UTME,2022,Second Semester,5,4.68,4.5,Improving,23,23,0,100,0,0,0,100,No,0,No
+200,Direct Entry,2024,First Semester,2.79,3.02,3.09,Declining,20,16,4,80,5,5,3,61.4,No,0,Yes
+200,UTME,2024,First Semester,3.37,3.51,3.46,Stable,20,20,0,100,1,1,1,75.6,No,0,No
+200,UTME,2024,Second Semester,2.8,2.71,2.79,Stable,20,15,5,75,5,3,1,66.2,No,1,Yes
+300,UTME,2023,First Semester,1.39,1.39,1.6,Declining,20,13,7,65,5,8,6,34.6,Yes,1,Yes
+500,Direct Entry,2020,First Semester,3.36,3.1,3.19,Improving,22,20,2,90.9,0,2,1,75.1,No,0,No
+300,UTME,2022,First Semester,4.18,4.21,4.45,Declining,22,21,1,95.5,0,0,0,62.1,No,0,No
+400,UTME,2021,Second Semester,5,4.72,4.47,Improving,19,19,0,100,0,0,0,100,No,0,No
+100,UTME,2025,Second Semester,5,5,4.48,Improving,23,23,0,100,0,0,0,95,No,0,No
+100,Direct Entry,2024,Second Semester,5,4.99,5,Stable,18,18,0,100,0,0,0,92.3,No,1,No
+300,UTME,2023,Second Semester,3.03,3.19,3.03,Stable,17,14,3,82.4,0,1,1,90,No,0,No
+300,UTME,2023,Second Semester,3.39,3.61,3.86,Declining,16,15,1,93.8,2,1,0,84.4,No,1,No
+500,UTME,2020,First Semester,4.77,4.72,4.6,Improving,24,24,0,100,2,0,0,85.5,No,1,No
+100,UTME,2025,First Semester,3.33,3.69,3.68,Declining,15,13,2,86.7,1,4,2,73.1,No,0,No
+100,UTME,2025,Second Semester,4.31,4.48,4.43,Stable,24,23,1,95.8,1,0,0,68.1,No,0,No
+500,Direct Entry,2020,Second Semester,4.59,4.88,4.58,Stable,21,18,3,85.7,0,0,0,88.5,No,1,No
+300,UTME,2023,First Semester,1.42,1.76,2.29,Declining,19,12,7,63.2,5,6,3,45.8,Yes,2,Yes
+200,UTME,2023,First Semester,4.16,3.87,3.69,Improving,23,23,0,100,0,0,0,79.9,No,0,No
+300,UTME,2023,Second Semester,4.16,4.07,4.28,Stable,16,15,1,93.8,1,0,0,88,No,0,No
+200,Transfer,2024,First Semester,4.97,4.82,4.5,Improving,22,22,0,100,0,0,0,100,No,0,No
+200,Direct Entry,2023,Second Semester,4.64,4.43,4.18,Improving,20,20,0,100,0,0,0,100,No,0,No
+100,UTME,2024,First Semester,2.99,3.19,3.62,Declining,17,15,2,88.2,4,3,2,51.6,No,0,Yes
+200,UTME,2023,Second Semester,2.83,2.87,3.04,Declining,24,17,7,70.8,6,5,2,62.8,No,0,Yes
+300,Direct Entry,2022,First Semester,3.44,3.14,2.95,Improving,24,22,2,91.7,1,2,1,81.3,No,1,No
+100,UTME,2025,Second Semester,3.07,2.84,2.92,Stable,15,14,1,93.3,1,0,0,82.6,No,0,No
+400,UTME,2022,Second Semester,3.76,4.09,3.86,Stable,19,18,1,94.7,1,1,1,75.2,No,0,No
+300,UTME,2023,Second Semester,3.76,4.05,3.85,Stable,23,23,0,100,0,0,0,89.1,No,0,No
+100,UTME,2024,Second Semester,5,4.85,4.27,Improving,19,19,0,100,0,0,0,100,No,1,No
+100,Direct Entry,2025,Second Semester,5,4.84,4.61,Improving,19,19,0,100,0,1,1,86.2,No,0,No
+300,UTME,2023,First Semester,2.73,2.8,3.01,Declining,23,18,5,78.3,5,5,3,71.3,No,0,Yes
+400,UTME,2022,Second Semester,2.8,3.2,3.11,Declining,22,18,4,81.8,4,4,2,65.2,No,1,Yes
+200,UTME,2024,First Semester,3.35,3.29,3.63,Declining,20,18,2,90,4,2,1,66.3,No,1,No
+300,Direct Entry,2022,First Semester,4.1,4.05,3.68,Improving,21,21,0,100,2,0,0,78,No,1,No
+500,UTME,2020,First Semester,3.38,3.21,2.94,Improving,19,16,3,84.2,0,3,1,80.9,No,1,No
+500,UTME,2020,Second Semester,3.83,4.4,4.24,Declining,20,19,1,95,4,2,1,71.6,No,0,Yes
+200,UTME,2023,Second Semester,2.76,2.89,2.71,Stable,16,12,4,75,3,2,1,79.2,No,0,No
+400,Direct Entry,2022,Second Semester,5,4.95,4.49,Improving,24,24,0,100,0,0,0,100,No,0,No
+200,UTME,2023,First Semester,3.77,3.92,3.89,Stable,16,16,0,100,3,0,0,69.4,No,0,No
+400,Direct Entry,2021,First Semester,2.14,2.17,2.26,Stable,19,16,3,84.2,2,4,2,69.5,No,0,Yes
+400,UTME,2021,First Semester,3.92,4.04,3.95,Stable,17,15,2,88.2,1,3,1,72.8,No,0,No
+300,UTME,2022,Second Semester,4.91,4.52,4.63,Improving,22,22,0,100,0,1,0,84.3,No,0,No
+400,UTME,2021,Second Semester,4.79,4.94,4.81,Stable,21,21,0,100,0,1,1,91.4,No,0,No
+100,UTME,2025,Second Semester,5,4.9,4.58,Improving,16,16,0,100,0,0,0,92,No,0,No
+200,UTME,2024,First Semester,3.24,3.31,3.32,Stable,21,19,2,90.5,3,3,1,77.3,No,1,Yes
+200,Direct Entry,2023,First Semester,2.04,2.25,2.38,Declining,17,12,5,70.6,4,1,1,65.1,No,0,No
+100,Direct Entry,2024,First Semester,3.46,3.3,3.03,Improving,21,21,0,100,1,0,0,88.1,No,0,No
+300,UTME,2023,Second Semester,2.25,2.01,2.2,Stable,15,14,1,93.3,2,5,3,59.1,No,0,Yes
+100,UTME,2024,First Semester,4.29,3.79,3.36,Improving,19,19,0,100,0,0,0,84.2,No,0,No
+100,UTME,2025,First Semester,3.85,4.13,4.38,Declining,24,22,2,91.7,1,3,2,84.6,No,0,No
+200,UTME,2024,First Semester,5,4.76,4.65,Improving,16,16,0,100,0,0,0,98,No,0,No
+300,UTME,2023,Second Semester,2.7,2.99,2.92,Declining,16,15,1,93.8,2,0,0,74,No,1,No
+200,UTME,2024,Second Semester,2.73,3.05,3.16,Declining,15,12,3,80,4,6,4,60.4,No,0,Yes
+500,Direct Entry,2021,Second Semester,3.64,3.99,4.35,Declining,23,22,1,95.7,1,2,1,67.8,No,0,No
+300,UTME,2023,First Semester,4.59,4.72,4.53,Stable,21,21,0,100,0,0,0,91.1,No,0,No
+400,Transfer,2021,First Semester,4.71,4.54,4.61,Stable,17,17,0,100,0,1,0,80.7,No,0,No
+300,Direct Entry,2022,First Semester,4.79,4.78,4.6,Improving,21,21,0,100,0,0,0,100,No,0,No
+100,UTME,2024,Second Semester,3.94,3.66,3.55,Improving,18,17,1,94.4,1,0,0,81.9,No,0,No
+200,UTME,2024,Second Semester,2.76,3.17,3.44,Declining,20,17,3,85,5,2,1,65.6,No,0,No
+500,UTME,2020,First Semester,4.82,4.49,4.58,Improving,23,22,1,95.7,0,0,0,88.8,No,1,No
+400,UTME,2022,First Semester,5,4.71,4.41,Improving,18,18,0,100,0,0,0,100,No,0,No
+200,Direct Entry,2023,Second Semester,0.99,1.71,2.08,Declining,20,10,10,50,6,10,7,31.2,Yes,1,Yes
+200,Direct Entry,2023,Second Semester,3.74,3.78,3.67,Stable,17,16,1,94.1,3,0,0,77.1,No,1,No
+100,UTME,2024,First Semester,2.98,3.18,3.15,Declining,17,14,3,82.4,3,2,1,64.6,No,0,No
+300,UTME,2023,Second Semester,5,4.8,4.73,Improving,22,22,0,100,0,0,0,100,No,0,No
+100,UTME,2024,Second Semester,2.8,2.76,2.99,Declining,20,18,2,90,3,3,2,68.3,No,1,Yes
+200,Direct Entry,2024,Second Semester,5,4.47,3.81,Improving,23,23,0,100,0,0,0,100,No,0,No
+100,UTME,2025,Second Semester,2.55,2.76,2.45,Stable,24,19,5,79.2,0,1,1,72,No,0,No
+300,Transfer,2022,Second Semester,2.22,2.36,2.64,Declining,22,18,4,81.8,4,4,2,62.3,No,0,Yes
+200,UTME,2024,Second Semester,4.85,4.71,5,Declining,17,17,0,100,0,2,1,75,No,0,No
+200,UTME,2023,First Semester,2.28,2.23,2.51,Declining,19,16,3,84.2,4,3,2,59,No,0,Yes
+100,UTME,2024,Second Semester,3.83,3.89,3.86,Stable,22,19,3,86.4,5,5,2,62,No,1,No
+300,UTME,2023,Second Semester,2.19,2.3,2.32,Stable,19,15,4,78.9,2,5,3,51.3,No,1,Yes
+300,UTME,2022,Second Semester,4.07,3.74,3.94,Stable,17,17,0,100,1,0,0,92.2,No,0,No
+200,UTME,2023,First Semester,3.78,3.41,3.32,Improving,20,18,2,90,0,3,2,68.3,No,0,Yes
+200,Direct Entry,2023,Second Semester,2.27,2.48,2.49,Declining,18,15,3,83.3,2,5,4,66.4,No,1,No
+500,UTME,2021,First Semester,3.4,3.48,3.3,Stable,23,21,2,91.3,1,2,1,88.5,No,1,No
+300,UTME,2023,Second Semester,2.59,2.92,2.75,Declining,21,20,1,95.2,2,7,4,55.3,No,1,Yes
+100,UTME,2024,First Semester,3.97,3.62,3.44,Improving,21,21,0,100,0,0,0,91.6,No,0,No
+300,UTME,2022,Second Semester,4.28,4.44,3.85,Improving,15,15,0,100,1,0,0,91,No,0,No
+100,UTME,2024,First Semester,1.55,1.5,1.5,Stable,22,15,7,68.2,5,5,3,61.4,Yes,1,Yes
+400,UTME,2021,First Semester,3.11,3.22,3.59,Declining,21,19,2,90.5,4,3,2,76.5,No,0,No
+200,UTME,2024,First Semester,3.87,3.84,3.55,Improving,20,20,0,100,0,0,0,82.7,No,1,No
+300,UTME,2023,Second Semester,2.15,2.85,3.46,Declining,17,11,6,64.7,6,5,4,53.7,No,0,Yes
+200,UTME,2023,Second Semester,5,4.61,4.69,Improving,24,24,0,100,1,0,0,95.1,No,1,No
+500,UTME,2020,Second Semester,3.93,3.81,3.85,Stable,18,16,2,88.9,2,1,0,79.4,No,1,Yes
+300,UTME,2022,Second Semester,2.45,2.09,2.06,Improving,21,20,1,95.2,2,0,0,65.7,No,0,Yes
+200,UTME,2024,Second Semester,4.07,3.76,3.64,Improving,21,20,1,95.2,1,0,0,77.1,No,0,Yes
+500,UTME,2021,Second Semester,4.64,4.45,4.18,Improving,21,21,0,100,0,0,0,86.1,No,0,No
+300,UTME,2023,First Semester,3.99,4.34,4.44,Declining,21,20,1,95.2,1,2,1,72.7,No,1,No
+200,UTME,2024,First Semester,4.29,4.58,4.65,Declining,19,16,3,84.2,2,1,1,67.2,No,0,No
+300,UTME,2022,First Semester,2.95,3.47,3.38,Declining,18,16,2,88.9,0,3,1,75.5,No,0,No
+200,Direct Entry,2023,First Semester,4.72,4.6,4.7,Stable,23,23,0,100,0,0,0,100,No,0,No
+100,Direct Entry,2024,First Semester,3.69,3.75,3.73,Stable,21,21,0,100,0,1,1,90.4,No,0,No
+200,UTME,2024,Second Semester,1.99,2.06,2.18,Declining,15,14,1,93.3,4,4,1,63.2,No,1,No
+200,UTME,2024,First Semester,5,4.92,4.51,Improving,22,22,0,100,0,0,0,100,No,0,No
+500,UTME,2021,Second Semester,4.96,4.94,4.8,Improving,24,24,0,100,0,0,0,97.9,No,1,No
+500,UTME,2020,Second Semester,3.7,3.81,3.44,Improving,19,17,2,89.5,1,1,0,84.1,No,0,No
+100,UTME,2024,First Semester,3.8,3.92,3.59,Improving,21,19,2,90.5,1,1,1,76.7,No,0,No
+100,Direct Entry,2024,Second Semester,4.1,4.09,3.59,Improving,18,18,0,100,0,2,1,94.4,No,0,No
+400,UTME,2021,Second Semester,5,4.93,4.24,Improving,18,18,0,100,0,0,0,93.9,No,2,No
+200,UTME,2024,Second Semester,4.2,3.95,3.88,Improving,18,17,1,94.4,2,1,1,82.8,No,0,No
+400,Direct Entry,2021,Second Semester,3.88,3.86,3.42,Improving,16,13,3,81.2,3,2,1,67.8,No,0,No
+100,UTME,2024,Second Semester,4.29,4.8,5,Declining,24,23,1,95.8,0,0,0,89,No,0,No
+100,UTME,2025,First Semester,2.72,3.09,3.12,Declining,18,15,3,83.3,1,0,0,65.7,No,0,No
+400,UTME,2022,Second Semester,3.45,3.68,4.12,Declining,16,13,3,81.2,4,4,3,83,No,1,No
+100,UTME,2024,Second Semester,3.13,3.33,3.33,Declining,19,18,1,94.7,1,2,1,72.7,No,0,Yes
+400,UTME,2022,First Semester,2.54,2.54,2.74,Declining,16,14,2,87.5,5,4,1,71.8,No,0,No
+500,UTME,2020,Second Semester,4.5,4.79,4.54,Stable,18,17,1,94.4,1,0,0,93.7,No,1,No
+100,UTME,2024,First Semester,2.61,2.34,2.56,Stable,19,15,4,78.9,4,5,2,70.8,No,0,Yes
+400,UTME,2022,First Semester,5,5,4.88,Stable,22,22,0,100,0,0,0,99.3,No,0,No
+500,UTME,2021,Second Semester,3.35,3.51,3.53,Declining,16,15,1,93.8,0,3,1,67.5,No,0,No
+400,UTME,2022,Second Semester,3.72,3.61,3.54,Improving,21,18,3,85.7,3,4,2,58.3,No,0,No
+400,UTME,2022,First Semester,4.27,4.1,4.23,Stable,22,20,2,90.9,2,0,0,67.7,No,0,No
+100,UTME,2024,First Semester,3.77,3.55,3.79,Stable,23,22,1,95.7,1,1,1,71.5,No,0,No
+200,UTME,2023,First Semester,3.6,3.13,3.32,Improving,20,19,1,95,0,1,1,74.7,No,1,No
+200,UTME,2023,First Semester,3.92,4.46,4.25,Declining,20,20,0,100,0,0,0,86.2,No,1,No
+400,UTME,2021,First Semester,4.51,4.34,4.35,Improving,24,24,0,100,0,0,0,98.4,No,0,No
+100,UTME,2025,Second Semester,3.16,3.45,3.46,Declining,15,14,1,93.3,4,3,1,75.4,No,0,No
+100,UTME,2025,First Semester,5,4.1,3.9,Improving,24,24,0,100,0,0,0,100,No,1,No
+400,Direct Entry,2021,Second Semester,4.63,4.48,4.28,Improving,21,21,0,100,0,0,0,100,No,0,No
+300,UTME,2022,Second Semester,5,4.51,4.33,Improving,21,21,0,100,0,0,0,100,No,0,No
+300,Direct Entry,2023,First Semester,4.38,4.44,4.44,Stable,22,21,1,95.5,0,1,1,92.5,No,0,No
+200,UTME,2023,Second Semester,3.11,3.35,3.57,Declining,15,14,1,93.3,0,2,1,64,No,1,No
+500,UTME,2021,First Semester,4.19,4.01,3.9,Improving,21,21,0,100,4,1,0,84.7,No,0,No
+200,UTME,2023,Second Semester,1.58,1.49,1.76,Declining,24,16,8,66.7,6,9,4,52.1,Yes,2,Yes
+200,UTME,2023,First Semester,3.93,3.85,3.89,Stable,23,21,2,91.3,1,0,0,71.3,No,1,No
+100,UTME,2024,First Semester,3.72,3.49,3.59,Stable,18,17,1,94.4,2,0,0,76.6,No,0,No
+300,UTME,2023,Second Semester,3.59,3.36,3.39,Improving,19,15,4,78.9,3,5,4,80,No,0,No
+400,Direct Entry,2021,First Semester,1.36,2.03,2.36,Declining,22,13,9,59.1,5,6,4,52,No,1,Yes
+100,Transfer,2025,First Semester,4.19,4.12,4.1,Stable,23,20,3,87,1,1,1,78,No,0,No
+500,UTME,2020,Second Semester,3.86,3.94,3.75,Stable,19,18,1,94.7,1,1,1,81.6,No,0,No
+100,Direct Entry,2024,First Semester,5,4.42,3.62,Improving,22,22,0,100,0,0,0,100,No,1,No
+200,UTME,2024,Second Semester,4.12,4.31,4.49,Declining,15,15,0,100,0,0,0,82,No,0,No
+400,UTME,2022,First Semester,5,5,4.95,Stable,17,17,0,100,0,0,0,100,No,0,No
+100,UTME,2025,First Semester,3.91,3.86,3.62,Improving,24,24,0,100,0,0,0,100,No,1,No
+400,UTME,2021,Second Semester,2.89,3.04,3.34,Declining,22,19,3,86.4,2,2,1,88,No,0,No
+200,UTME,2024,First Semester,3.76,3.47,3.51,Improving,23,23,0,100,2,2,1,82.1,No,1,No
+200,UTME,2024,First Semester,3.01,3.1,3.05,Stable,20,16,4,80,2,4,2,76.4,No,1,No
+300,UTME,2023,First Semester,3.53,3.37,3.33,Improving,23,20,3,87,2,2,1,83.7,No,0,No
+200,Direct Entry,2024,First Semester,3.59,4.03,3.88,Declining,21,17,4,81,2,2,1,71,No,0,Yes
+400,UTME,2021,First Semester,4.04,4.32,4.44,Declining,22,21,1,95.5,0,0,0,76,No,0,No
+500,UTME,2021,Second Semester,4.2,4.11,4,Improving,18,18,0,100,0,0,0,93.3,No,0,No
+200,Direct Entry,2024,First Semester,2.69,2.92,2.83,Stable,20,16,4,80,3,6,4,55.5,No,0,Yes
+300,UTME,2023,Second Semester,3.75,3.86,4.01,Declining,18,17,1,94.4,1,1,1,77.3,No,0,No
+100,UTME,2024,First Semester,4.07,3.93,3.78,Improving,17,17,0,100,0,1,1,75,No,0,No
+300,Direct Entry,2023,First Semester,0.76,1.62,1.71,Declining,23,15,8,65.2,8,6,3,41.8,Yes,1,Yes
+300,UTME,2022,Second Semester,3.23,3.4,4.1,Declining,20,17,3,85,4,1,1,63.8,No,1,No
+400,Direct Entry,2022,Second Semester,4.27,4.54,4.37,Stable,15,14,1,93.3,0,0,0,74.7,No,0,No
+300,UTME,2023,Second Semester,3.93,4.11,4.34,Declining,22,21,1,95.5,1,2,1,88,No,0,No
+100,UTME,2024,First Semester,1.84,2.14,2.47,Declining,15,11,4,73.3,6,4,2,51,No,0,Yes
+500,UTME,2021,First Semester,2.69,2.61,2.57,Stable,19,15,4,78.9,3,3,2,55.8,No,0,No
+100,UTME,2025,First Semester,4.03,4.04,3.68,Improving,23,23,0,100,1,1,0,85.6,No,1,No
+400,UTME,2022,First Semester,2.69,2.91,3.02,Declining,20,15,5,75,4,5,4,72.3,No,1,Yes
+400,UTME,2022,First Semester,1.82,1.68,2.17,Declining,15,12,3,80,4,3,2,68.2,Yes,1,No
+200,UTME,2023,Second Semester,4.55,5,5,Declining,23,21,2,91.3,1,3,2,62.8,No,0,No
+400,UTME,2021,First Semester,4,4.36,4.44,Declining,15,13,2,86.7,0,2,1,76.8,No,1,No
+300,UTME,2022,First Semester,2.3,2.27,2.57,Declining,16,13,3,81.2,3,2,1,63.9,No,0,Yes
+500,UTME,2021,Second Semester,4.31,4.1,3.92,Improving,24,24,0,100,0,0,0,89.2,No,0,No
+500,UTME,2020,Second Semester,2.55,2.97,3.12,Declining,17,15,2,88.2,3,3,2,80.3,No,0,Yes
+200,UTME,2023,Second Semester,4.13,4.09,4.27,Stable,16,15,1,93.8,1,0,0,78.8,No,0,No
+500,UTME,2020,Second Semester,3.7,3.28,3.35,Improving,22,21,1,95.5,0,0,0,78.4,No,0,No
+300,Transfer,2023,First Semester,4.16,3.7,3.74,Improving,16,16,0,100,0,0,0,79.8,No,0,No
+200,UTME,2024,First Semester,3.54,3.39,3.34,Improving,16,15,1,93.8,0,3,2,86.5,No,0,Yes
+300,Direct Entry,2023,First Semester,4.87,4.83,4.96,Stable,22,22,0,100,0,0,0,82.7,No,0,No
+400,Direct Entry,2021,Second Semester,5,4.93,4.66,Improving,24,24,0,100,0,0,0,81.1,No,0,No
+300,UTME,2023,Second Semester,2.46,3.03,2.97,Declining,24,19,5,79.2,2,5,3,60.6,No,1,Yes
+300,UTME,2023,First Semester,5,4.95,5,Stable,24,24,0,100,0,0,0,92.5,No,1,No
+200,UTME,2024,Second Semester,3.75,3.65,3.58,Improving,22,18,4,81.8,2,1,1,70.8,No,0,No
+100,UTME,2024,Second Semester,4.41,4.39,4.18,Improving,20,20,0,100,0,0,0,97.3,No,0,No
+100,UTME,2024,First Semester,4.96,4.74,4.2,Improving,16,16,0,100,0,0,0,100,No,0,No
+200,UTME,2023,Second Semester,3.3,3.41,3.55,Declining,15,15,0,100,1,0,0,73.3,No,0,No
+300,UTME,2022,Second Semester,3.09,3.06,3.12,Stable,21,17,4,81,1,2,1,67.7,No,0,No
+100,Transfer,2025,Second Semester,3.23,3.14,2.95,Improving,20,20,0,100,2,3,1,79.4,No,1,No
+200,UTME,2024,First Semester,4.6,4.6,4.98,Declining,20,18,2,90,1,2,1,63.5,No,0,No
+100,UTME,2024,Second Semester,4.19,4.06,4.01,Improving,20,20,0,100,0,0,0,96.3,No,0,No
+400,UTME,2022,First Semester,3.74,3.83,3.46,Improving,18,18,0,100,0,0,0,82.6,No,1,No
+100,UTME,2025,Second Semester,3.64,3.78,3.58,Stable,20,20,0,100,3,0,0,81.2,No,1,No
+100,UTME,2024,First Semester,4.33,4.56,4.66,Declining,15,15,0,100,0,0,0,98.9,No,1,No
+500,UTME,2021,First Semester,4.12,3.94,4.08,Stable,15,15,0,100,2,0,0,88.6,No,0,No
+100,UTME,2024,First Semester,4,3.85,4.16,Declining,22,20,2,90.9,0,1,0,77.7,No,0,No
+100,Direct Entry,2025,Second Semester,3.62,4.19,4.64,Declining,16,16,0,100,2,0,0,76.7,No,0,No
+100,UTME,2025,Second Semester,2.97,3.07,3.06,Stable,21,17,4,81,3,3,1,71.5,No,0,No
+200,UTME,2024,First Semester,3.84,3.79,4.01,Declining,16,16,0,100,0,0,0,85,No,0,No
+200,UTME,2023,First Semester,4.33,4.12,3.86,Improving,17,17,0,100,0,0,0,79.8,No,0,No
+300,UTME,2022,First Semester,3.16,3.46,3.41,Declining,24,19,5,79.2,2,5,2,66,No,0,Yes
+300,Direct Entry,2022,Second Semester,4.09,4.08,4.39,Declining,18,17,1,94.4,1,0,0,78,No,0,No
+300,Transfer,2023,First Semester,4.46,4.45,4.07,Improving,20,20,0,100,0,0,0,87.5,No,1,No
+200,Direct Entry,2024,First Semester,3.6,3.59,3.48,Stable,16,16,0,100,1,0,0,80,No,0,No
+400,Transfer,2021,Second Semester,3.5,3.99,3.73,Declining,23,20,3,87,5,3,1,80.6,No,0,No
+100,UTME,2024,First Semester,3.99,3.82,3.96,Stable,21,21,0,100,0,1,0,88.4,No,0,No
+400,Direct Entry,2022,First Semester,3.98,3.76,3.56,Improving,17,17,0,100,0,0,0,89.6,No,0,No
+100,UTME,2024,First Semester,5,4.34,3.95,Improving,15,15,0,100,0,0,0,100,No,0,No
+300,Direct Entry,2022,First Semester,3.67,3.63,3.63,Stable,24,21,3,87.5,1,3,2,76.2,No,1,No
+500,Direct Entry,2020,First Semester,3.41,3.34,3.05,Improving,19,19,0,100,1,3,2,90,No,0,No
+300,UTME,2023,First Semester,3.96,3.92,4.19,Declining,17,16,1,94.1,0,1,0,84.5,No,0,No
+200,Direct Entry,2023,Second Semester,4.72,4.43,3.87,Improving,21,21,0,100,0,0,0,80.4,No,0,No
+300,UTME,2022,First Semester,3.76,3.88,3.56,Improving,19,19,0,100,1,1,1,85.5,No,1,No
+100,UTME,2025,First Semester,4.13,4.27,4.26,Stable,17,16,1,94.1,0,1,1,81.5,No,0,No
+200,Direct Entry,2023,Second Semester,4.14,4.13,4.12,Stable,23,23,0,100,0,0,0,89.9,No,1,No
+200,Direct Entry,2024,First Semester,4.4,4.05,3.83,Improving,24,24,0,100,0,0,0,100,No,0,No
+100,Direct Entry,2025,Second Semester,4.74,4.68,4.52,Improving,18,18,0,100,0,0,0,98.8,No,0,No
+500,Direct Entry,2020,First Semester,3.96,3.87,3.36,Improving,17,17,0,100,0,0,0,74.3,No,0,No
+400,UTME,2022,Second Semester,4.56,4.84,4.8,Declining,23,23,0,100,0,0,0,95.1,No,0,No
+100,Direct Entry,2025,Second Semester,3.8,3.88,4.15,Declining,18,17,1,94.4,2,1,1,70.6,No,0,No
+200,UTME,2024,Second Semester,4.04,3.78,3.47,Improving,24,24,0,100,0,0,0,82.6,No,0,No
+400,UTME,2022,First Semester,4.11,3.65,3.26,Improving,16,16,0,100,0,0,0,85,No,0,No
+500,UTME,2021,Second Semester,4.04,3.88,3.64,Improving,21,20,1,95.2,3,1,0,70.8,No,2,No
+100,Direct Entry,2025,Second Semester,4.55,4.15,3.8,Improving,22,22,0,100,0,0,0,100,No,0,No
+200,Transfer,2024,Second Semester,3.5,3.05,3.41,Stable,20,17,3,85,1,2,1,76.2,No,1,No
+500,UTME,2021,First Semester,2.16,2.44,2.78,Declining,19,15,4,78.9,5,5,2,56.8,No,0,Yes
+500,UTME,2020,First Semester,3.02,2.8,2.95,Stable,21,20,1,95.2,1,0,0,78,No,0,No
+300,UTME,2022,First Semester,3.84,3.35,3.28,Improving,21,21,0,100,0,0,0,93.8,No,1,No
+100,UTME,2024,First Semester,2.45,2.26,2.58,Stable,19,17,2,89.5,2,2,1,75.7,No,1,No
+200,UTME,2023,Second Semester,1.92,2.11,2.19,Declining,15,11,4,73.3,4,6,3,54.9,No,0,Yes
+300,UTME,2022,Second Semester,3.46,3.49,2.9,Improving,17,17,0,100,2,0,0,71.4,No,0,No
+200,UTME,2023,Second Semester,2.97,3.07,3.2,Declining,24,21,3,87.5,2,3,2,74.7,No,0,Yes
+500,UTME,2020,Second Semester,3.42,3.11,3.31,Stable,21,20,1,95.2,0,1,1,92.6,No,1,No
+200,UTME,2023,Second Semester,3.63,3.82,3.94,Declining,16,15,1,93.8,2,1,1,80.2,No,1,No
+200,Direct Entry,2023,First Semester,3.31,3.77,3.78,Declining,16,13,3,81.2,1,1,0,82.6,No,0,No
+200,UTME,2023,First Semester,2.28,2.59,2.52,Declining,15,11,4,73.3,5,7,3,47.4,No,3,Yes
+400,UTME,2022,Second Semester,1.67,2.15,2.33,Declining,15,13,2,86.7,4,5,2,68.6,No,0,Yes
+100,UTME,2025,Second Semester,4.48,4.22,4.03,Improving,24,24,0,100,0,0,0,100,No,0,No
+300,UTME,2022,Second Semester,3.64,3.52,3.45,Improving,16,16,0,100,2,2,2,79.7,No,1,Yes
+200,UTME,2024,Second Semester,3.84,4.11,4.31,Declining,17,16,1,94.1,1,0,0,83.1,No,0,No
+300,UTME,2023,Second Semester,4.48,4.46,4.54,Stable,22,22,0,100,0,0,0,87.3,No,0,No
+100,Direct Entry,2025,First Semester,4.2,4.04,3.85,Improving,17,17,0,100,0,0,0,80.2,No,0,No
+500,UTME,2021,First Semester,3.5,3.7,3.95,Declining,19,17,2,89.5,2,1,1,68.2,No,0,No
+300,UTME,2023,Second Semester,3.58,3.7,3.6,Stable,20,17,3,85,2,2,2,77.9,No,1,No
+300,UTME,2022,First Semester,4.31,4.34,4.26,Stable,24,24,0,100,0,0,0,89.9,No,0,No
+100,UTME,2025,Second Semester,3.32,3.39,3.39,Stable,24,20,4,83.3,1,5,2,79.2,No,1,No
+300,UTME,2023,Second Semester,4.92,4.77,4.37,Improving,20,20,0,100,0,0,0,100,No,0,No
+300,Direct Entry,2022,Second Semester,3.75,3.66,4.1,Declining,18,16,2,88.9,4,0,0,68.7,No,0,No
+400,UTME,2022,Second Semester,4.86,4.81,4.42,Improving,21,21,0,100,0,0,0,97.8,No,0,No
+500,UTME,2021,Second Semester,4.45,4.5,4.39,Stable,18,17,1,94.4,3,2,1,90.3,No,0,No
+200,UTME,2024,First Semester,2.55,3.2,3.52,Declining,17,14,3,82.4,3,5,2,64.6,No,0,Yes
+500,UTME,2021,First Semester,4.64,4.79,4.89,Declining,18,18,0,100,2,0,0,80.1,No,1,No
+400,UTME,2022,First Semester,2.87,3.47,3.83,Declining,16,11,5,68.8,5,5,2,59,No,0,Yes
+300,Direct Entry,2022,First Semester,5,4.69,4.52,Improving,16,16,0,100,0,0,0,86.9,No,0,No
+400,UTME,2022,Second Semester,3.02,3.47,3.89,Declining,19,14,5,73.7,3,3,1,62.8,No,0,No
+500,UTME,2021,Second Semester,4.26,3.88,4.09,Improving,15,15,0,100,0,0,0,87.3,No,0,No
+200,UTME,2023,Second Semester,5,4.8,4.45,Improving,20,20,0,100,0,0,0,100,No,0,No
+500,Direct Entry,2020,Second Semester,3.55,3.86,3.77,Declining,20,19,1,95,0,1,0,85.2,No,0,No
+100,UTME,2025,Second Semester,3.66,3.63,3.63,Stable,20,18,2,90,1,1,1,71.1,No,0,Yes
+300,UTME,2023,First Semester,3.37,3.51,3.43,Stable,21,21,0,100,3,3,2,82.6,No,0,No
+400,UTME,2021,First Semester,4.72,4.61,4.25,Improving,18,18,0,100,0,0,0,91.2,No,0,No
+300,Direct Entry,2022,First Semester,4.81,5,4.9,Stable,23,23,0,100,1,0,0,91.6,No,0,No
+100,UTME,2025,First Semester,4.45,4.19,4.39,Stable,22,22,0,100,0,0,0,76.1,No,0,No
+100,UTME,2024,Second Semester,4.87,4.93,4.86,Stable,16,16,0,100,0,0,0,78.6,No,0,No
+500,UTME,2021,Second Semester,5,4.65,3.85,Improving,16,16,0,100,0,0,0,100,No,0,No
+500,UTME,2021,Second Semester,4.59,4.73,5,Declining,17,17,0,100,0,0,0,86,No,1,No
+100,UTME,2025,First Semester,3.92,3.55,3.78,Stable,16,16,0,100,0,0,0,100,No,0,No
+400,UTME,2022,First Semester,4.74,4.73,4.11,Improving,20,20,0,100,0,0,0,100,No,0,No
+300,UTME,2022,Second Semester,4.2,4.37,4.71,Declining,21,20,1,95.2,2,0,0,72.7,No,1,No
+300,Direct Entry,2023,First Semester,2.59,2.5,2.25,Improving,19,18,1,94.7,2,2,1,85.7,No,1,No
+200,UTME,2023,Second Semester,2.67,3.19,3.3,Declining,19,17,2,89.5,0,3,2,58,No,0,No
+400,UTME,2021,Second Semester,2.83,2.93,3.06,Declining,24,19,5,79.2,3,2,1,60.5,No,0,No
+400,UTME,2021,Second Semester,4.68,4.18,4.34,Improving,19,19,0,100,0,1,0,90.9,No,1,No
+100,UTME,2025,First Semester,3.89,3.82,4.07,Declining,18,18,0,100,0,0,0,100,No,0,No
+400,Direct Entry,2022,Second Semester,4.38,4.47,5,Declining,24,20,4,83.3,1,1,1,80.8,No,0,No
+400,UTME,2022,Second Semester,4.7,4.81,4.66,Stable,22,22,0,100,0,0,0,95,No,0,No
+300,UTME,2022,First Semester,4.65,4.58,4.41,Improving,15,15,0,100,0,0,0,82.3,No,0,No
+300,UTME,2023,First Semester,3.01,3.07,3.17,Declining,18,15,3,83.3,2,2,1,68.4,No,0,No
+200,UTME,2023,First Semester,3.37,3.44,3.33,Stable,20,19,1,95,2,1,1,70.6,No,1,Yes
+200,UTME,2024,First Semester,3.66,3.96,3.75,Stable,15,13,2,86.7,1,3,2,77.8,No,0,No
+300,Direct Entry,2023,First Semester,1.35,1.73,1.8,Declining,23,14,9,60.9,5,5,3,53.6,Yes,1,Yes
+300,UTME,2022,First Semester,1.91,2,2.37,Declining,19,16,3,84.2,5,6,3,45.6,Yes,2,Yes
